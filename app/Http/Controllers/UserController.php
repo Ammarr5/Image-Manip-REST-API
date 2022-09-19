@@ -45,6 +45,6 @@ class UserController extends Controller
             return response("Invalid credentials", 401);
         }
         // $request->session()->regenerate();
-        return auth()->user()->createToken("sessionToken")->plainTextToken;
+        return ["token" => auth()->user()->createToken("sessionToken")->plainTextToken];
     }
 }
