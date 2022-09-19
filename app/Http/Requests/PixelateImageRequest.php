@@ -14,7 +14,7 @@ class PixelateImageRequest extends FormRequest
      */
     public function authorize()
     {
-        return Gate::allows("create");
+        return true;
     }
 
     /**
